@@ -19,7 +19,7 @@ def borrarPantalla(): #Definimos la función estableciendo el nombre que queramo
 	
 #borrarPantalla = lambda: os.system ("cls")
 
-#*****************calculo de corriente (amperios)*********************
+#*****************calculo de corriente cable unipolar(amperios)*********************
 
 salir = [0,1]
 i = 0
