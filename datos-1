@@ -21,3 +21,33 @@ bipolarEnterrado=[28.0,38.0,50.0,66.0,89.0,110.0]
 seccionSubterraneoTripolar=[1.50,2.50,4.0,6.0,10.0,16.0,25.0,35.0,50.0]
 tripolarBandeja=[15.0,21.0,28.0,37.0,50.0,64.0,86.0,105.0,128.0]
 tripolarEnterrado=[24.0,32.0,44.0,56.0,72.0,94.0,120.0,144.0,172.0]
+
+
+importar variables desde otro archivo
+
+Hola Frimatic, en python es muy sencillo importar variables o clases de otro archivo.
+
+supongamos el archivo variables.py con el contenido:
+
+
+var1="casa"
+var2="avion"
+
+
+supongamos el archivo miCodigo.py con el contenido:
+
+
+from variables import *
+print(var1)
+
+
+
+De esta manera, estas obteniendo las variables del archivo variables.py.
+
+Si únicamente quisieras importar la variable var1, podrías hacerlo así:
+
+
+from variables import var1
+
+
+Espero que te sirva
