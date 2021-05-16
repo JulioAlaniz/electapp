@@ -2,6 +2,7 @@
 #calculo de secciones de cable en extraido de la tabla de argenplas
 
 
+
 class menu():
     def __init__(self):
         opcionCables=[1,2,3,4,5,6,7,8,9]
