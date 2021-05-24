@@ -9,6 +9,7 @@ i = 0
 while i in salir:
     if i == 0:
         try:
+            borrarPantalla()
             print("*************** Opciones de cables ********************")
             print("1-> Cable unipolar")
             print("2-> Cable tipo taller")
@@ -22,11 +23,11 @@ while i in salir:
             o = int(input('ingrese opcion (de 1 a 9)\n'))
             if o == 1:
                 calcularCorrienteUnipolar()
-                a = int(input('desea continuar, 1: salir de la app ó 0: elegir otra opcion\n'))
+                a = int(input('1: salir de la app ó 0: elegir otro cable\n'))
                 i = salir[a]
             elif o == 2:
                 calcularCorrienteTaller()
-                a = int(input('desea continuar, 1: salir de la app ó 0: elegir otra opcion\n'))
+                a = int(input(' 1: salir de la app ó 0: elegir otro cable\n'))
                 i = salir[a]
             
             else:
