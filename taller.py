@@ -19,9 +19,10 @@ def borrarPantalla(): #Definimos la función estableciendo el nombre que queramo
 #borrarPantalla = lambda: os.system ("cls")
 
 def calcularSeccionTaller(arg):
+    borrarPantalla()
     print('la seccion nominal es de:\t\t\t'+ str(f"{seccionTaller[arg]:.2f}"),' mm2')
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxTaller[arg]:.2f}"),' Amp')
-    
+    print('')
 
 def calcularCorrienteTaller():
     salir = [0,1]

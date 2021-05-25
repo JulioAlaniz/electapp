@@ -20,11 +20,13 @@ def borrarPantalla(): #Definimos la función estableciendo el nombre que queramo
 
 #*********
 def calcularSeccionUnipolar(arg):
+    borrarPantalla()
     print('la seccion nominal es de:\t\t\t'+ str(f"{seccion[arg]:.2f}"),' mm2')
     print('el diametro exterior del cable es de:\t\t'+ str(f"{diametroExterior[arg]:.2f}"),' mm')
     print('el peso por cada 100mts es de:\t\t\t'+ str(f"{peso[arg]:.2f}"),' kg')
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMax[arg]:.2f}"),' Amp')
     print('fusible NH es de:\t\t\t\t'+ str(f"{fusible[arg]:.2f}"),' Amp')
+    print('')
 
 def calcularCorrienteUnipolar():
     salir = [0,1]
