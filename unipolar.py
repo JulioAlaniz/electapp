@@ -38,65 +38,67 @@ def calcularCorrienteUnipolar():
                 watts =float(input('ingrese la carga en watts\n'))
                 volts = 220.0
                 amps = watts/volts
-                if amps<=3:#1
+                if amps<=3:
                     calcularSeccionUnipolar(0)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>3 and amps<=8:#2
+                elif amps>3 and amps<=8:
                     calcularSeccionUnipolar(1)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>8 and amps<=11:#3
+                elif amps>8 and amps<=11:
                     calcularSeccionUnipolar(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>11 and amps<=13:#4
+                elif amps>11 and amps<=13:
                     calcularSeccionUnipolar(3)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>13 and amps<=18:#5
+                elif amps>13 and amps<=18:
                     calcularSeccionUnipolar(4)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>18 and amps<=24:#6
+                elif amps>18 and amps<=24:
                     calcularSeccionUnipolar(5)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>24 and amps<=31:#7
+                elif amps>24 and amps<=31:
                     calcularSeccionUnipolar(6)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>31 and amps<=42:#8
+                elif amps>31 and amps<=42:
                     calcularSeccionUnipolar(7)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>42 and amps<=56:#9
+                elif amps>42 and amps<=56:
                     calcularSeccionUnipolar(8)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>56 and amps<=73:#10
+                elif amps>56 and amps<=73:
                     calcularSeccionUnipolar(9)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>73 and amps<=89:#11
+                elif amps>73 and amps<=89:
                     calcularSeccionUnipolar(10)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>89 and amps<=108:#12
+                elif amps>89 and amps<=108:
                     calcularSeccionUnipolar(11)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>108 and amps<=136:#13
+                elif amps>108 and amps<=136:
                     calcularSeccionUnipolar(12)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>136 and amps<=164:#14
+                elif amps>136 and amps<=164:
                     calcularSeccionUnipolar(13)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
-                elif amps>164 and amps<=188:#15
+                elif amps>164 and amps<=188:
                     calcularSeccionUnipolar(14)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
+                    i = salir[a]
+                elif amps>188 and amps<=310:    
                     calcularSeccionUnipolar(15)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
@@ -105,6 +107,5 @@ def calcularCorrienteUnipolar():
             except:
                 print('Ups! Volvé a intentarlo')
         else:
-
             break
              
