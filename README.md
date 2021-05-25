@@ -4,7 +4,7 @@ Aplicacion para el cálculo de sección de conductores (cables elétricos) para 
 
 Está basada en una tabla elaborada por Argenplas S.A.
 
-Versión 0
+Versión 1.0
 
 ## Pendiente
 
