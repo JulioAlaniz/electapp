@@ -16,68 +16,64 @@ corrienteMaxSubtTripolarE=[0.0,0.0,24.0,32.0,44.0,56.0,72.0,94.0,120.0,144.0,182
 
 # *************** Unipolar B (en bandeja) *******************************************************
 
-def calcularSecionUnipolarB(arg):
+def calcularSeccionUnipolarB(arg):
     borrarPantalla()
     print('la seccion nominal es de:\t\t\t'+ str(f"{seccion[arg]:.2f}"),' mm2')
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxSubtUnipolarB[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteSubtUnipolarB():
+def opcionCorrienteSubtUnipolarB(amps):
     salir = [0,1]
     i = 0
     while i in salir:
-        
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps<=41:#1
-                    calcularSecionUnipolarB(2)
+                    calcularSeccionUnipolarB(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>41 and amps<=53:#2
-                    calcularSecionUnipolarB(3)
+                    calcularSeccionUnipolarB(3)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>53 and amps<=80:#3
-                    calcularSecionUnipolarB(4)
+                    calcularSeccionUnipolarB(4)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>80 and amps<=97:#4
-                    calcularSecionUnipolarB(5)
+                    calcularSeccionUnipolarB(5)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>97 and amps<=121:#5
-                    calcularSecionUnipolarB(6)
+                    calcularSeccionUnipolarB(6)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>121 and amps<=149:#6
-                    calcularSecionUnipolarB(7)
+                    calcularSeccionUnipolarB(7)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>149 and amps<=181:#7
-                    calcularSecionUnipolarB(8)
+                    calcularSeccionUnipolarB(8)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>181 and amps<=221:#8
-                    calcularSecionUnipolarB(9)
+                    calcularSeccionUnipolarB(9)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>221 and amps<=272:#9
-                    calcularSecionUnipolarB(10)
+                    calcularSeccionUnipolarB(10)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>272 and amps<=316:#10
-                    calcularSecionUnipolarB(11)
+                    calcularSeccionUnipolarB(11)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>316 and amps<=360:#11
-                    calcularSecionUnipolarB(12)
+                    calcularSeccionUnipolarB(12)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>360 and amps<=410:#12
-                    calcularSecionUnipolarB(13)
+                    calcularSeccionUnipolarB(13)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 else:
@@ -87,7 +83,8 @@ def calcularCorrienteSubtUnipolarB():
         else:
             break
 
-# ****************** Unipolar E (enterrado) ******************************
+
+# *************** Unipolar e (enterrado) *******************************************************
 
 def calcularSecionUnipolarE(arg):
     borrarPantalla()
@@ -95,16 +92,12 @@ def calcularSecionUnipolarE(arg):
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxSubtUnipolarE[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteSubtUnipolarE():
+def opcionCorrienteSubtUnipolarE(amps):
     salir = [0,1]
     i = 0
     while i in salir:
-        
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps<=54:#1
                     calcularSecionUnipolarE(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
@@ -168,16 +161,12 @@ def calcularSecionBipolarB(arg):
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxSubtBipolarB[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteSubtBipolarB():
+def opcionCorrienteSubtBipolarB(amps):
     salir = [0,1]
     i = 0
     while i in salir:
-        
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps<=19:#1
                     calcularSecionBipolarB(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
@@ -211,44 +200,40 @@ def calcularCorrienteSubtBipolarB():
 
 # ****************** Bipolar E (enterrado) ******************************
 
-def calcularSecionBipolarE(arg):
+def calcularSeccionBipolarE(arg):
     borrarPantalla()
     print('la seccion nominal es de:\t\t\t'+ str(f"{seccion[arg]:.2f}"),' mm2')
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxSubtBipolarE[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteSubtBipolarE():
+def opcionCorrienteSubtBipolarE(amps):
     salir = [0,1]
     i = 0
     while i in salir:
-        
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps<=28:#1
-                    calcularSecionBipolarE(2)
+                    calcularSeccionBipolarE(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>28 and amps<=38:#2
-                    calcularSecionBipolarE(3)
+                    calcularSeccionBipolarE(3)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>38 and amps<=50:#3
-                    calcularSecionUnipolarE(4)
+                    calcularSeccionBipolarE(4)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>50 and amps<=66:#4
-                    calcularSecionUnipolarE(5)
+                    calcularSeccionBipolarE(5)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>66 and amps<=89:#5
-                    calcularSecionUnipolarE(6)
+                    calcularSeccionBipolarE(6)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>89 and amps<=110:#6
-                    calcularSecionUnipolarE(7)
+                    calcularSeccionBipolarE(7)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 else:
@@ -256,62 +241,56 @@ def calcularCorrienteSubtBipolarE():
             except:
                 print('Ups! Volvé a intentarlo')
         else:
-
             break       
-
 
 # ****************** Tripolar B (en bandeja) ******************************
 
-def calcularSecionTripolarB(arg):
+def calcularSeccionTripolarB(arg):
     borrarPantalla()
     print('la seccion nominal es de:\t\t\t'+ str(f"{seccion[arg]:.2f}"),' mm2')
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxSubtTripolarB[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteSubtTripolarB():
+def opcionCorrienteSubtTripolarB(amps):
     salir = [0,1]
     i = 0
     while i in salir:
-        
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps<=15:#1
-                    calcularSecionTripolarB(2)
+                    calcularSeccionTripolarB(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>15 and amps<=21:#2
-                    calcularSecionTripolarB(3)
+                    calcularSeccionTripolarB(3)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>21 and amps<=28:#3
-                    calcularSecionTripolarB(4)
+                    calcularSeccionTripolarB(4)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>28 and amps<=37:#4
-                    calcularSecionTripolarB(5)
+                    calcularSeccionTripolarB(5)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>37 and amps<=50:#5
-                    calcularSecionTripolarB(6)
+                    calcularSeccionTripolarB(6)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>50 and amps<=64:#6
-                    calcularSecionTripolarB(7)
+                    calcularSeccionTripolarB(7)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>64 and amps<=86:#7
-                    calcularSecionTripolarB(8)
+                    calcularSeccionTripolarB(8)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>86 and amps<105:#8
-                    calcularSecionTripolarB(9)
+                    calcularSeccionTripolarB(9)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>105 and amps<128:#8
-                    calcularSecionTripolarB(9)
+                    calcularSeccionTripolarB(9)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 else:
@@ -324,56 +303,53 @@ def calcularCorrienteSubtTripolarB():
 
 # ****************** Tripolar E (enterrado) ******************************
 
-def calcularSecionTripolarE(arg):
+def calcularSeccionTripolarE(arg):
     borrarPantalla()
     print('la seccion nominal es de:\t\t\t'+ str(f"{seccion[arg]:.2f}"),' mm2')
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxSubtTripolarE[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteSubtTripolarE():
+def opcionCorrienteSubtTripolarE(amps):
     salir = [0,1]
     i = 0
     while i in salir:
         
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps<24:#1
-                    calcularSecionTripolarE(2)
+                    calcularSeccionTripolarE(2)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>24 and amps<=32:#2
-                    calcularSecionTripolarE(3)
+                    calcularSeccionTripolarE(3)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>32 and amps<=44:#3
-                    calcularSecionTripolarE(4)
+                    calcularSeccionTripolarE(4)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>44 and amps<=56:#4
-                    calcularSecionTripolarE(5)
+                    calcularSeccionTripolarE(5)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>56 and amps<=72:#5
-                    calcularSecionTripolarE(6)
+                    calcularSeccionTripolarE(6)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>72 and amps<=94:#6
-                    calcularSecionTripolarE(7)
+                    calcularSeccionTripolarE(7)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>94 and amps<=120:#7
-                    calcularSecionTripolarE(8)
+                    calcularSeccionTripolarE(8)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>120 and amps<=144:#8
-                    calcularSecionTripolarE(9)
+                    calcularSeccionTripolarE(9)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 elif amps>144 and amps<=172:#9
-                    calcularSecionTripolarE(10)
+                    calcularSeccionTripolarE(10)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
                     i = salir[a]
                 else:

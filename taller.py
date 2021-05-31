@@ -24,15 +24,12 @@ def calcularSeccionTaller(arg):
     print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxTaller[arg]:.2f}"),' Amp')
     print('')
 
-def calcularCorrienteTaller():
+def opcionCorrienteTaller(amps):
     salir = [0,1]
     i = 0
     while i in salir:
         if i == 0:
             try:
-                watts =float(input('ingrese la carga en watts\n'))
-                volts = 220.0
-                amps = watts/volts
                 if amps <=10:#1
                     calcularSeccionTaller(0)
                     a = int(input('1: elegir otro cable ó 0: mismo cable\n'))
