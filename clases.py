@@ -28,28 +28,33 @@ def salir(dato):
 # *************************** Clases ***************************
 
 class Menu:
-    def __init__(self):
-        self.opcion=[1,2,3,4,5,6,7,8,9]
-        
-    def menu(self):
-        borrarPantalla()
-        print("*************** Opciones de cables ********************")
-        print("1-> Cable unipolar")
-        print("2-> Cable tipo taller")
-        print("3-> Cable subterraneo unipolar en bandeja")
-        print("4-> Cable subterraneo unipolar enterrado")
-        print("5-> Cable subterraneo bipolar en bandeja")
-        print("6-> Cable subterraneo bipolar enterrado")
-        print("7-> Cable subterraneo tripolares c/s neutro en bandeja")
-        print("8-> Cable subterraneo tripolares c/s neutro enterrado")
-        print("9-> Para salir")
-        print()
-        opcion = int(input('ingrese opcion (de 1 a 9)\n'))
-        return(opcion)
-       
+    def __menu__(self):
+        i = 0
+        while i == 0:
+            borrarPantalla()
+            print("*************** Opciones de cables ********************")
+            print('')
+            print("1-> Cable unipolar")
+            print("2-> Cable tipo taller")
+            print("3-> Cable subterraneo unipolar en bandeja")
+            print("4-> Cable subterraneo unipolar enterrado")
+            print("5-> Cable subterraneo bipolar en bandeja")
+            print("6-> Cable subterraneo bipolar enterrado")
+            print("7-> Cable subterraneo tripolares c/s neutro en bandeja")
+            print("8-> Cable subterraneo tripolares c/s neutro enterrado")
+            print("9-> Para salir")
+            print()
+            try:
+                opcion = int(input('ingrese opcion (de 1 a 9)\n'))
+                if 0 < opcion < 10:
+                    return(opcion)
+                else:
+                    input('la opcion elegida está fuera de rango, vuelva a intentarlo')
+            except:
+                input('ups! entrada inválida , precione Enter para continuar')
+        else:
+            input('precione Enter para continuar')
  
-
-
 class TipoCable:
     def __init__(self, opcionCable, arg):
         if opcionCable == 1:
@@ -69,18 +74,21 @@ class TipoCable:
         elif opcionCable ==8:
             opcionCorrienteSubtTripolarE(arg)
 
-
 class CalculoCorriente:
     def __init__(self):
-        self.watts =float(input('ingrese la carga en watts\n'))
-        self.volts =float(input('ingrese el voltaje\n'))
+        i=0
+        while i == 0:
+            try:
+                i = 1
+                self.watts =float(input('ingrese la carga en watts\n'))
+                self.volts =220 #float(input('ingrese el voltaje\n'))
+            except:
+                input('entrada inválida, presione culaquier tecla\n')
+                i = 0
+        else:
+            pass
 
     def amperios(self):
         amps=self.watts/self.volts
-        print(amps)     # agregar formateo para dos digitos
+        print(amps)     
         return amps
-    #borrarPantalla()
-    #print('la seccion nominal unipolable en amperios es de:\t'+ str(f"{corrienteMax[arg]:.2f}"),' Amp')
-    #print('fusible NH es de:\t\t\t\t'+ str(f"{fusible[arg]:.2f}"),' Amp')
-    #print('')   
-    #pass
