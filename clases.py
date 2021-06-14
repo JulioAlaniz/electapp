@@ -22,6 +22,9 @@ def salir(dato):
         borrarPantalla()
         print('\n\n\n\n\n\ngracias por usar electapp')
         print('https://github.com/JulioAlaniz')
+        print('Para colaborar con el desarrollor de esta aplicación, ingresá al enlace siguiente.')
+        print('https://cafecito.app/julio-58')
+        print('gracias!')
         print('\n\n\n\n\n')
         sys.exit()
 

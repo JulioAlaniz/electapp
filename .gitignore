@@ -3,3 +3,5 @@ datos-1
 electapp-workspace.code-workspace
 pendiente
 class
+poetry.lock
+pyproject.toml
