@@ -8,6 +8,9 @@ from subterraneo import opcionCorrienteSubtBipolarE
 from subterraneo import opcionCorrienteSubtTripolarB
 from subterraneo import opcionCorrienteSubtTripolarE
 import sys
+from rich.table import Table
+from rich.console import Console
+from rich.markdown import Markdown
 
 # *************************** Funsiones ***************************
 import os
@@ -22,11 +25,38 @@ def salir(dato):
         borrarPantalla()
         print('\n\n\n\n\n\ngracias por usar electapp')
         print('https://github.com/JulioAlaniz')
-        print('Para colaborar con el desarrollor de esta aplicación, ingresá al enlace siguiente.')
+        print('Para colaborar con el desarrollo de esta aplicación, ingresá al enlace siguiente.')
         print('https://cafecito.app/julio-58')
         print('gracias!')
         print('\n\n\n\n\n')
         sys.exit()
+
+console = Console()
+
+cablesMenu = [
+    {"indice":"1", "tipo":"Cable unipolar"},
+    {"indice":"2", "tipo":"Cable tipo taller"},
+    {"indice":"3", "tipo":"Cable subterraneo unipolar en bandeja"},
+    {"indice":"4", "tipo":"Cable subterraneo unipolar enterrado"},
+    {"indice":"5", "tipo":"Cable subterraneo bipolar en bandeja"},
+    {"indice":"6", "tipo":"Cable subterraneo bipolar enterrado"},
+    {"indice":"7", "tipo":"Cable subterraneo tripolar c/s neutro en bandeja"},
+    {"indice":"8", "tipo":"Cable subterraneo tripolar c/s neutro enterrado"},
+    {"indice":"9", "tipo":"Para salir"}
+]
+
+def formatPantalla():
+    console.print(Markdown('# Opciones de cables'))
+    table = Table(show_header=True, header_style="bold steel_blue1")
+    table.add_column("Indice", style="dim", width=30, justify="center")
+    table.add_column("Tipo de cable", style="dim", width=120, justify="left")
+    i=0
+    for i in range(0,len(cablesMenu)):
+        elementos=cablesMenu[i]
+        indice = elementos["indice"]
+        tipo = elementos["tipo"]
+        table.add_row(f"{indice}", f"{tipo}")
+    console.print(table)
 
 # *************************** Clases ***************************
 
@@ -34,19 +64,8 @@ class Menu:
     def __menu__(self):
         i = 0
         while i == 0:
-            borrarPantalla()
-            print("*************** Opciones de cables ********************")
-            print('')
-            print("1-> Cable unipolar")
-            print("2-> Cable tipo taller")
-            print("3-> Cable subterraneo unipolar en bandeja")
-            print("4-> Cable subterraneo unipolar enterrado")
-            print("5-> Cable subterraneo bipolar en bandeja")
-            print("6-> Cable subterraneo bipolar enterrado")
-            print("7-> Cable subterraneo tripolares c/s neutro en bandeja")
-            print("8-> Cable subterraneo tripolares c/s neutro enterrado")
-            print("9-> Para salir")
-            print()
+  #          borrarPantalla()
+ #           formatSalida()
             try:
                 opcion = int(input('ingrese opcion (de 1 a 9)\n'))
                 if 0 < opcion < 10:
