@@ -1,46 +1,68 @@
-#electapp v0.2
-#calculo de secciones de cable en extraido de la tabla de argenplas
+# electapp v0.2
+# calculo de secciones de cable en extraido de la tabla de argenplas
 
-#*************Listas cable tipo taller*************
-seccionTaller=[0.75,1.0,1.50,2.50,4.0,6.0,10.0,16.0,]
-corrienteMaxTaller=[10.0,13.0,16.0,22.0,30.0,38.0,53.0,71.0]
+# *************Listas cable tipo taller*************
+seccionTaller = [
+    0.75,
+    1.0,
+    1.50,
+    2.50,
+    4.0,
+    6.0,
+    10.0,
+    16.0,
+]
+corrienteMaxTaller = [10.0, 13.0, 16.0, 22.0, 30.0, 38.0, 53.0, 71.0]
 
-#***************funciones***************
+# ***************funciones***************
 import os
-def borrarPantalla(): #Definimos la función estableciendo el nombre que queramos
+
+
+def borrarPantalla():  # Definimos la función estableciendo el nombre que queramos
     if os.name == "posix":
-        os.system ("clear")
+        os.system("clear")
     elif os.name == "ce" or os.name == "nt" or os.name == "dos":
-        os.system ("cls")
-#borrarPantalla = lambda: os.system ("clear")
-	
-#borrarPantalla = lambda: os.system ("cls")
+        os.system("cls")
+
+
+# borrarPantalla = lambda: os.system ("clear")
+
+# borrarPantalla = lambda: os.system ("cls")
+
 
 def calcularSeccionTaller(arg):
     borrarPantalla()
-    print('************ valores del cable selecionado **************')
-    print('')
-    print('la seccion nominal es de:\t\t\t'+ str(f"{seccionTaller[arg]:.2f}"),' mm2')
-    print('la corriente admisible en amperios es de:\t'+ str(f"{corrienteMaxTaller[arg]:.2f}"),' Amp')
-    print('')
-    input('presione cualquier tecla para continuar')
+    print("************ valores del cable selecionado **************")
+    print("")
+    print("la seccion nominal es de:\t\t\t" + str(f"{seccionTaller[arg]:.2f}"), " mm2")
+    print(
+        "la corriente admisible en amperios es de:\t"
+        + str(f"{corrienteMaxTaller[arg]:.2f}"),
+        " Amp",
+    )
+    print("")
+    input("presione cualquier tecla para continuar")
+
 
 def opcionCorrienteTaller(amps):
-                if amps <=10:#1
-                    calcularSeccionTaller(0)
-                elif amps>10 and amps<=13:#2
-                    calcularSeccionTaller(1)
-                elif amps>13 and amps<=16:#3
-                    calcularSeccionTaller(2)
-                elif amps>16 and amps<=22:#4
-                    calcularSeccionTaller(3)
-                elif amps>22 and amps<=30:#5
-                    calcularSeccionTaller(4)
-                elif amps>30 and amps<=38:#6
-                    calcularSeccionTaller(5)
-                elif amps>38 and amps<=53:#7
-                    calcularSeccionTaller(6)
-                elif amps>53 and amps<=71:#8
-                    calcularSeccionTaller(7)
-                else:
-                    print('El dato ingresado está fuera de rangprint()''El dato ingresado está fuera de rango')
+    if amps <= 10:  # 1
+        calcularSeccionTaller(0)
+    elif amps > 10 and amps <= 13:  # 2
+        calcularSeccionTaller(1)
+    elif amps > 13 and amps <= 16:  # 3
+        calcularSeccionTaller(2)
+    elif amps > 16 and amps <= 22:  # 4
+        calcularSeccionTaller(3)
+    elif amps > 22 and amps <= 30:  # 5
+        calcularSeccionTaller(4)
+    elif amps > 30 and amps <= 38:  # 6
+        calcularSeccionTaller(5)
+    elif amps > 38 and amps <= 53:  # 7
+        calcularSeccionTaller(6)
+    elif amps > 53 and amps <= 71:  # 8
+        calcularSeccionTaller(7)
+    else:
+        print(
+            "El dato ingresado está fuera de rangprint()"
+            "El dato ingresado está fuera de rango"
+        )
