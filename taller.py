@@ -14,9 +14,7 @@ def borrarPantalla(): #Definimos la función estableciendo el nombre que queramo
         os.system ("clear")
     elif os.name == "ce" or os.name == "nt" or os.name == "dos":
         os.system ("cls")
-#borrarPantalla = lambda: os.system ("clear")
-	
-#borrarPantalla = lambda: os.system ("cls")
+
 
 def calcularSeccionTaller(arg):
     borrarPantalla()

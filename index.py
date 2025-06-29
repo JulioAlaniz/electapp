@@ -1,3 +1,8 @@
+"""  
+Punto de entrada principal de la aplicación ElectApp.  
+Inicializa y ejecuta la interfaz gráfica de electrostática.  
+"""
+
 from unipolar import calcularCorrienteUnipolar, borrarPantalla
 from taller import calcularCorrienteTaller
 from subterraneo import calcularCorrienteSubtUnipolarB
@@ -24,7 +29,7 @@ while i in salir:
             print("7-> Cable subterraneo tripolares c/s neutro en bandeja")
             print("8-> Cable subterraneo tripolares c/s neutro enterrado")
             print()
-            o = int(input('ingrese opcion (de 1 a 9)\n'))
+            o = int(input('ingrese opcion (de 1 a 8)\n'))
             if o == 1:
                 calcularCorrienteUnipolar()
                 a = int(input('1: salir de la app ó 0: elegir otro cable\n'))
